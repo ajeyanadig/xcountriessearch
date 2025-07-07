@@ -19,7 +19,9 @@ function App() {
   function handleSearch(e) {
     let str = e.target.value;
     setCountriesDisplay(
-      countries.filter((curr) => curr.common.toLowerCase().includes(str))
+      countries.filter((curr) =>
+        curr.common.toLowerCase().includes(str.toLowerCase())
+      )
     );
   }
   return (
